@@ -1,12 +1,8 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -23,44 +19,53 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
+env/
+venv/
+ENV/
+.env
 
-# PyInstaller
-*.manifest
-*.spec
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.hypothesis/
+.tox/
+
+# Documentation
+docs/_build/
+docs/api/
+
+# Distribution / packaging
+.venv
 
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
-.hypothesis/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-
-# Virtual Environments
-venv/
-env/
-ENV/
-
-# IDE files
-.idea/
-.vscode/
-*.swp
-*.swo
-
 # macOS
-.DS_Store
 
 # Local config
-.env
 config.local.yaml
 .aider.conf.yml 
+.aider*

@@ -1,90 +1,28 @@
-# Example Aider Configuration File
-# Copy this to .aider.conf.yml in your home directory or project root
+# Example Aider configuration file
+# Place this at ~/.aider.conf.yml, at the root of your Git repository as .aider.conf.yml,
+# or specify it with --config-file
 
-#################
-# LLM Settings:
+# Model settings
+model: gpt-4
+max_tokens: 4096
+temperature: 0.0
 
-## Specify which model to use
-# model: "gpt-4"
+# Git settings
+auto_commits: true
+auto_commit_message: "AI: {{summary}}"
+user_input_mode: never
 
-## Use Claude 3.5 Sonnet as the main model
-# use-claude: true
+# Editor settings
+editor: code
+auto_edit_file_extensions: .py .js .jsx .ts .tsx .html .css .md .txt
+use_system_editor: false
 
-## OpenAI API options
-# openai-api-key: "<your-key-here>"  # Better to set in .env file
-# openai-api-base: "https://api.openai.com/v1"
-# openai-api-version: "2023-05-15"
+# UI settings
+dark_mode: true
+pretty: true
+show_diffs: true
 
-## Anthropic API options
-# anthropic-api-key: "<your-key-here>"  # Better to set in .env file
-
-#################
-# Display Settings:
-
-## Use dark mode colors
-# dark-mode: true
-
-## Use debug mode (verbose output)
-# verbose: false
-
-## Enable voice mode
-# voice: false
-
-## Enable multi-line input mode with Meta-Enter to submit
-# multiline: false
-
-## Enable terminal bell notifications when LLM responses are ready
-# notifications: false
-
-#################
-# Git Settings:
-
-## Enable/disable auto git commits
-# auto-commit: true
-
-## Git commit message prefix
-# message-prefix: "[aider] "
-
-## Git identity to use
-# git-identity: ""
-
-#################
-# File Settings:
-
-## Specify files to automatically include
-# file:
-#   - app.py
-#   - models.py
-#   - views.py
-
-## Specify read-only files for reference
-# read:
-#   - README.md
-#   - CONVENTIONS.md
-
-## Line endings to use when writing files (choices: platform, crlf, lf)
-# line-endings: platform
-
-## Encoding for files
-# encoding: utf-8
-
-#################
-# Editor Settings:
-
-## Editor to use with /edit command
-# editor: "code"
-
-## Use VI editing mode in the terminal
-# vim: false
-
-#################
-# Advanced settings:
-
-## Repo map method (choices: tree-sitter, simple, none)
-# map-method: tree-sitter
-
-## Enable/disable suggesting shell commands
-# suggest-shell-commands: true
-
-## Enable/disable fancy input with history and completion
-# fancy-input: true 
+# Misc settings
+verbose: false
+save_edits: false
+stream: true 
